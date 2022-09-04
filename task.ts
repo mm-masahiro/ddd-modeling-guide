@@ -1,4 +1,5 @@
 class Task {
+	constructor(name: string, dueDate: Date) {};
   id: number;
 
   set name(name: string) {
