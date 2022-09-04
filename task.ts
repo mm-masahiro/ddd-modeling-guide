@@ -16,4 +16,8 @@ class Task {
   set postponeCount(postponeCount: number) {
     this.postponeCount = postponeCount;
   };
+
+	get postponeCount() {
+		return this.postponeCount;
+	}
 };

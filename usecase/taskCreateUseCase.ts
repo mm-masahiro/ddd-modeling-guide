@@ -1,6 +1,4 @@
-interface TaskRepository {
-  save: (task) => void;
-};
+import { TaskRepository } from '../repository/taskRepository';
 
 class TaksCreateUseCase {
   taskRepository: TaskRepository;
