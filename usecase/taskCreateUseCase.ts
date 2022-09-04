@@ -17,8 +17,9 @@ class TaksCreateUseCase {
   // };
 
 	createTask(name: string, dueDate: Date) {
-		// task生成のルール/制約がなくなっている
-		const task = new Task(name, dueDate);
+		// task生成のルール/制約がなくなっている = ドメイン知識を表現する実装を全く持たなくなった
+		const task = new Task();
+		task.createTask(name, dueDate);
 		this.taskRepository.save(task);
 	}
 };

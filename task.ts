@@ -1,24 +1,19 @@
 class Task {
-	constructor(name: string, dueDate: Date) {};
+	static readonly MAX_POSTPONE_COUNT = 3;
+
   id: number;
+	name: string;
+	dueDate: Date;
+	taskStatus: string;
+	postponeCount: number;
 
-  set name(name: string) {
-    this.name = name;
-  };
-
-  set taskStatus(taskStatus: string) {
-    this.taskStatus = taskStatus;
-  };
-
-  set dueDate(dueDate: Date) {
-    this.dueDate = dueDate;
-  };
-
-  set postponeCount(postponeCount: number) {
-    this.postponeCount = postponeCount;
-  };
-
-	get postponeCount() {
-		return this.postponeCount;
+	createTask(name: string, dueDate: Date) {
+		if (!name || !dueDate) {
+			console.log('error occured');
+		};
+		this.name = name;
+		this.dueDate = dueDate;
+		this.taskStatus = 'undone';
+		this.postponeCount = 0;
 	}
 };
